@@ -4,12 +4,7 @@
     ETML
     Name:	Write-Numbers.ps1
     Author:	Killian Good
-    Date:	03.03.2021
- 	*****************************************************************************
-    Modifications
- 	Date  : 03.03.2021
- 	Author: Killian Good
- 	Reason: 
+    Date:	17.03.2021
  	*****************************************************************************
 .SYNOPSIS
     Summary 
@@ -23,17 +18,8 @@
 .PARAMETER maximum
     Maximum value 9
  	
-.OUTPUTS
-	File(s), modifications or results
-	
-.EXAMPLE
-    Example of using the script with results obtained
- 	
-.LINK
-    other scripts
 #>
 
-# "..." value by default
 param([string]$min, $max)
 
 #display help if parameter is missing
@@ -49,6 +35,6 @@ else
     {
         Write-Host $maxMin 
     }
-}# endif
+}
 
 
