@@ -6,11 +6,6 @@
     Author:	Killian Good
     Date:	17.03.2021
  	*****************************************************************************
-    Modifications
- 	Date  : 03.03.2021
- 	Author: Killian Good
- 	Reason: Show the number enter by the user
- 	*****************************************************************************
 .SYNOPSIS
     Summary 
  	
@@ -21,27 +16,33 @@
     enter the user value
 
 #>
-
-# "..." value by default
 param([int]$nbMax)
 
 #display help if parameter is missing
 if(!$nbMax)
 {
     Get-Help $MyInvocation.Mycommand.Path
+    Write-Host "Merci de renseigner le paramètre"
+    exit
 }
 else
 {
-    do{
-        Write-Host -NoNewline "Nombre à afficher : "
-        $input = read-host
+    #Variable initialisation
+    [int]$displayNb=0
 
-        if($input -lt $nbMax)
+    #Check that the number is less than the parameter
+    do
+    {
+        $displayNb = Read-Host "Le nombre entier à afficher est"
+
+        if ($displayNb -lt $nbMax)
         {
-            Write-Host $input 
+            Write-Host $displayNb
         }
+        else 
+        {
+            break
+        }
+    } while ($displayNb -le $nbMax)
 
-    }while($input -lt $nbMax)
-}
-
-
+} #endif (!nbMax)

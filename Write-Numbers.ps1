@@ -10,7 +10,7 @@
     Summary 
  	
 .DESCRIPTION
-    Description (explanation of script)
+    scripts with number in parameter stocked in array for max and min value
   	
 .PARAMETER minimum
     Minimum value 4
@@ -26,15 +26,26 @@ param([string]$min, $max)
 if(!$min -or !$max)
 {
     Get-Help $MyInvocation.Mycommand.Path
+    Write-Host "Renseigner les deux paramètres svp"
     exit
 }
 else
 {
-    $array=$min..$max
-    foreach ($maxMin in $array)
+    if($min -ge $max )
     {
-        Write-Host $maxMin 
+        Write-Host "Merci de donner un paramètre min plus petit que le max"
     }
-}
+    else 
+    {
+        $array=($min..$max)
+        
+        foreach($nb in $array)
+        {
+            Write-Host $nb
+        } # end foreach ($nb in $array)
+    
+    } #endif ($min -ge $max )
+    
+}#endif (!$min -or $max)
 
 

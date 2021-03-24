@@ -13,13 +13,13 @@
  	*****************************************************************************
  	
 .DESCRIPTION
-    Description (explanation of script)
+    scripts displaying the name and surname of the user
   	
 .PARAMETER NAME
-    The name of the paramteter
+    The name of the user
 
 .PARAMETER FIRSTNAME
-    The firstname of the paramteter
+    The firstname of the user
 #>
 
 param([string]$Name, [string]$Firstname)
@@ -32,9 +32,7 @@ if(!$Name -or !$Firstname)
 }
 else
 {
-    
     Write-Host "Bonjour" $Firstname $Name
-    
 }
 
 

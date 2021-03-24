@@ -1,0 +1,14 @@
+Write-Bonjour -> DONE
+Give-Name -> DONE
+Give-Surname -> DONE
+Write-Numbers -> DONE
+Read-Numbers -> DONE
+test-function-Date -> DONE
+Check-Args -> DONE
+Check.Param -> DONE
+Add-Numbers -> DONE (problème de paranthèse au niveau du if)
+Create-Group -> DONE
+Create-User -> DONE
+Add-UserGroup -> DONE
+
+all the scripts are done but need to be run to see if all the scripts are okay
